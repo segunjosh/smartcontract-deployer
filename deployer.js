@@ -7,6 +7,8 @@ var provider = new Web3.providers.HttpProvider(process.env.RPCENDPOINT)
  // Super Admin details
  const account = process.env.ADMIN
  const account_pass = process.env.ADMIN_PASS
+ 
+
 
 web3.eth.personal.unlockAccount(account, account_pass, 300)
   .then(function(res){
@@ -23,3 +25,4 @@ web3.eth.personal.unlockAccount(account, account_pass, 300)
       console.log('Contract Address : ' + receipt.contractAddress);
     });
   });
+  
